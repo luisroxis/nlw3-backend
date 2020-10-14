@@ -2,7 +2,7 @@
    "type": "sqlite",
    "database": "./src/database/database.sqlite",
    "entities": [
-      "src/database/entity/*.ts"
+      "src/database/models/*.ts"
    ],
    "migrations": [
       "src/database/migrations/*.ts"
@@ -11,7 +11,7 @@
       "src/database/subscriber/*.ts"
    ],
    "cli": {
-      "entitiesDir": "./src/database/entity",
+      "entitiesDir": "./src/database/models",
       "migrationsDir": "./src/database/migrations",
       "subscribersDir": "./src/database/subscriber"
    }
