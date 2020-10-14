@@ -2,7 +2,7 @@
   import Image from './Image'
 
   @Entity('orphanages')
-export default class Orphanages{
+export default class Orphanage{
   @PrimaryGeneratedColumn('increment')
   id: number;
 
@@ -27,7 +27,9 @@ export default class Orphanages{
   @Column()
   open_on_weekends: boolean;
   
-  @OneToMany(()=> Image ,image => image.orpahanage)
+  @OneToMany(()=> Image ,image => image.orphanage, {
+    cascade: ['insert', 'update']
+  })
   @JoinColumn({name: 'orphanageId'})
   images:Image[]
 
